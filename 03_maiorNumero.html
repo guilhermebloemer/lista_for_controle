@@ -6,12 +6,18 @@
     No final, apresente o maior número informado pelo usuário.
     */
 
-    //ENTRADA
+    // ENTRADA
+    let numeros = [];
 
-    
-    //PROCESSAMENTO
+    // PROCESSAMENTO
+    for (let i = 0; i < 5; i++) {
+        let num = Number(prompt(`Informe o ${i + 1}º número:`));
+        numeros.push(num);
+    }
+    let listaFinal = [];
+    numeros.sort((a, b) => a - b);
+    listaFinal = numeros.pop();
 
-    
-    //SAÍDA
-
+    // SAÍDA
+    alert(`O maior número informado foi: ${listaFinal}`);
 </script>

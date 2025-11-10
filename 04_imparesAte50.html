@@ -6,11 +6,15 @@
     */
 
     //ENTRADA
-
+    let array = [];
 
     //PROCESSAMENTO
-
-
+    for (i = 1; i <= 50; i++) {
+        if ((i % 2) != 0) {
+            array.push(i);
+        }
+    }
     //SAÍDA
+    alert(`Os números ímpares são ${array.join(", ")}`);
 
 </script>

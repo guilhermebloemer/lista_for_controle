@@ -7,11 +7,17 @@
     */
 
     //ENTRADA
-    
+    let notas = Number(prompt("Quantas notas o aluno obteve?"));
+    let notasDoAluno = [];
+    let soma = 0;
 
     //PROCESSAMENTO
+    for (let nota = 1; nota <= notas; nota++) {
+        notasDoAluno = Number(prompt("Informe as notas do aluno: "));
+        soma += notasDoAluno;
+    }
+    let media = soma / notas;
     
-
     //SAÍDA
-
+    alert(`A média do aluno foi de ${media}.`);
 </script>
