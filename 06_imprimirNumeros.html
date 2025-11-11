@@ -2,36 +2,33 @@
 <script>
   /*
     PROBLEMA: IMPRIMIR NÚMEROS
-    Faça um programa que pergunte ao usuário um número inicial e um número final. Verifique se o número inicial é menor que o número final e apresente na tela os números ímpares e os números pares que estão entre os dois números. Se o número inicial for maior ou igual ao número final, apresente mensagem de erro para o usuário, informando a regra para o número inicial e número final.
-    */
+    Faça um programa que pergunte ao usuário um número inicial e um número final.
+    Verifique se o número inicial é menor que o número final e apresente na tela
+    os números ímpares e os números pares que estão entre os dois números.
+    Se o número inicial for maior ou igual ao número final, apresente mensagem
+    de erro para o usuário.
+  */
 
-  //ENTRADA
+  // ENTRADA
   let numInicial = Number(prompt("Informe um número inicial: "));
   let numFinal = Number(prompt("Informe o número final: "));
   let pares = [];
   let impares = [];
 
-  //PROCESSAMENTO apresente na tela os números ímpares e os números pares que estão entre os dois números
-
-  if (numInicial++ === numFinal) {
-    alert(`blabla`);
-  }
-  else if (numInicial < numFinal) {
-    let numInicialNovo = numInicial + 1;
-    for (let item = numInicialNovo; item < numFinal; item++) {
-      if (item % 2 == 0) {
+  // PROCESSAMENTO
+  if (numInicial >= numFinal) {
+    alert("Erro!");
+  } else {
+    for (let item = numInicial + 1; item < numFinal; item++) {
+      if (item % 2 === 0) {
         pares.push(item);
       } else {
         impares.push(item);
       }
     }
-  }
 
-  //SAÍDA
-  alert(
-    `A lista de números ímpares que esta entre o número inicial e o final é: ${impares}.`
-  );
-  alert(
-    `A lista de números pares que esta entre o número inicial e o final é: ${pares}.`
-  );
+    // SAÍDA
+    alert(`Os números ímpares entre ${numInicial} e ${numFinal} são: ${impares.join(", ")}`);
+    alert(`Os números pares entre ${numInicial} e ${numFinal} são: ${pares.join(", ")}`);
+  }
 </script>
